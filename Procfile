@@ -1,1 +1,1 @@
-web: gunicorn Geeky Prince.wsgi
+web: gunicorn GeekyPrince.wsgi
