@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+  <link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+  <link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+  <title>{% block title %}
+    {% endblock title %}</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Geeky Prince</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item {% block homeactive %} {% endblock homeactive %}">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" {% block aboutactive %} {% endblock aboutactive %}>
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item" {% block blogactive %} {% endblock blogactive %}>
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item" {% block servicesactive %} {% endblock servicesactive %}>
+          <a class="nav-link" href="/services">Services</a>
+        </li>
+        <li class="nav-item" {% block contactactive %} {% endblock contactactive %}>
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0" method="GET" action="/search">
+        <input name="query" id="query" class="form-control mr-sm-2" type="search" placeholder="Search"
+          aria-label="Search">
+        <button class="btn btn-outline-success mr-2 my-sm-0" type="submit">Search</button>
+        <button type="button" class="btn btn-danger mr-2" data-toggle="modal" data-target="#signupModal"
+          data-whatever="@mdo">SignUp</button>
+        <button type="button" class="btn btn-danger mr-2" data-toggle="modal" data-target="#loginModal"
+          data-whatever="@mdo">Login</button>
+      </form>
+
+      <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title " name="signup" id="signup">Sign-Up Here</h5>
+            </div>
+            <div class="modal-body">
+              <form action="/signup" method="POST" >
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="firstname">First Name</label>
+                    <input type="firstname" class="form-control" id="firstname" name= "firstname">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="lastname">Last Name</label>
+                    <input type="lastname" class="form-control" id="lastname" name="lastname">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="username">Username :</label>
+                  <input type="text" class="form-control" name="username" id="username"
+                    placeholder="Like as : Prince Charles">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email :</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="prince@gmail.com">
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword4">Password</label>
+                  <input type="password" class="form-control" name="password1" id="password1">
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword4">Confirm Password</label>
+                  <input type="password" class="form-control" name="password2" id="password2">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity" name="inputcity">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputState">State</label>
+                    <select id="inputState" class="form-control" name="state" id="state">
+                      <option selected>Choose...</option>
+                      <option>Andhra Pradesh</option>
+                      <option>Arunachal Pradesh</option>
+                      <option>Assam</option>
+                      <option>Bihar</option>
+                      <option>Chhattishgarh</option>
+                      <option>Goa</option>
+                      <option>Gujarat</option>
+                      <option>Haryana</option>
+                      <option>Himanchal Pradesh</option>
+                      <option>Jharkhand</option>
+                      <option>Karnataka</option>
+                      <option>Kerala</option>
+                      <option>Madhya Pradesh</option>
+                      <option>Maharashtra</option>
+                      <option>Manipur</option>
+                      <option>Meghalaya</option>
+                      <option>Mizoram</option>
+                      <option>Nagaland</option>
+                      <option>Odisha</option>
+                      <option>Punjab</option>
+                      <option>Rajasthan</option>
+                      <option>Sikkim</option>
+                      <option>Tamil Nadu</option>
+                      <option>Telangana</option>
+                      <option>Tripura</option>
+                      <option>Uttar Pradesh</option>
+                      <option>Uttarakhand</option>
+                      <option>West Bengal</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip" name="inputZip">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              {% csrf_token %}
+              <button type="submit" class="btn btn-warning">For Login Click Here</button>
+              <button type="submit" class="btn btn-success">Sign up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title " name="login" id="login">Login Here</h5>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-row">
+              <div class="form-group m-2">
+                <label for="username">Username :</label>
+                <input type="text" class="form-control" name="usernamel" id="usernamel"
+                  placeholder="Like as : Prince Charles">
+              </div>
+              <div class="form-group m-2">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" name="password" id="inputPassword4">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-warning">For SignUP Click Here</button>
+            <button type="submit" class="btn btn-danger">Forget Password</button>
+            <button type="submit" class="btn btn-success">Login</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  {% for message in messages %}
+  <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+    <strong>Message : </strong> {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% endfor %}
+  {% block name %}
+  {% endblock name %}
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

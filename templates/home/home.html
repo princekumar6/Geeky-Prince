@@ -1,0 +1,319 @@
+{% extends 'base.html' %}
+
+{% block title %} Geeky Prince
+{% endblock title %}
+{% block name %} 
+    <style>
+
+     .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+        /* stylelint-disable selector-list-comma-newline-after */
+
+.blog-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 2.25rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+}
+
+.card-img-right {
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
+}
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+  border-radius: 2rem;
+}
+
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-title {
+  margin-bottom: .25rem;
+  font-size: 2.5rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #999;
+}
+
+/*
+ * Footer
+ */
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+    
+    </style>
+     <div class="container">
+  
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 text-muted" href="#">Technology</a>
+      <a class="p-2 text-muted" href="#">India</a>
+      <a class="p-2 text-muted" href="#">World</a>
+      <a class="p-2 text-muted" href="#">Design</a>
+      <a class="p-2 text-muted" href="#">Culture</a>
+      <a class="p-2 text-muted" href="#">Business</a>
+      <a class="p-2 text-muted" href="#">Politics</a>
+      <a class="p-2 text-muted" href="#">Opinion</a>
+      <a class="p-2 text-muted" href="#">Science</a>
+      <a class="p-2 text-muted" href="#">Health</a>
+      <a class="p-2 text-muted" href="#">Upcoming events</a>
+      <a class="p-2 text-muted" href="#">Travel</a>
+    </nav>
+  </div>
+
+  <div class="jumbotron p-4 p-md-5 text-white rounded bg-danger">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 font-italic">Tech is going to cover the whole market.</h1>
+      <p class="lead my-3">Basically the whole world in emerging into the technology because all the people are just addicted for uses of technology.</p>
+      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold btn btn-alert-success" class="btn btn-outline-warning">Continue reading...</a></p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">India</strong>
+          <h3 class="mb-0">Featured post</h3>
+          <div class="mb-1 text-muted">2 June 2020</div>
+          <p class="card-text mb-auto">Covid-19 Impact: Rural India's other health emergencies take a back seat.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <a><img class="bd-placeholder-img" width="200" height="250" href="" ></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Design</strong>
+          <h3 class="mb-0">Post title</h3>
+          <div class="mb-1 text-muted">Nov 11</div>
+          <p class="mb-auto">Non-bank lender Fullerton India gets $100 mn from its parent company.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <h3 class="pb-4 mb-4 font-italic border-bottom">
+        The Latest Trend
+      </h3>
+
+      <div class="blog-post">
+        <h2 class="blog-post-title">The economic slowdown ....</h2>
+        <p class="blog-post-meta">June 2, 2020 by <a href="#">Prince</a></p>
+
+        <p>To put simply, a recession is the decline of economic activity, which means that the public have stopped buying products for a while which can cause the downfall of the GDP after a expansion of the economy (A time where products become popular and the income profit of a business becomes large.</p>
+        <hr>
+        <p>Recessions have psychological and confidence aspects. For example, if companies expect economic activity to slow, they may reduce employment levels and save money rather than invest.</p>
+        <blockquote>
+          <p>Generally an administration gets credit or blame for the state of economy during its time.</p>
+        </blockquote>
+        <p><strong>Economists</strong> usually teach that to some degree recession is unavoidable, and its causes are not well understood.</p>
+        <h2><b>Consequences</b></h2>
+        <p> Many economists working within the neoclassical paradigm argue that there is a natural rate of unemployment which, when subtracted from the actual rate of unemployment, can be used to calculate the negative GDP gap during a recession.</p>
+        <h3>Indian Economy</h3>
+        <p>The economy of India is characterised as a developing market economy.[42][43] It is the world's fifth-largest economy by nominal GDP and the third-largest by purchasing power parity (PPP).</p>
+        <pre><code>Defence System</code></pre>
+        <p>With strength of over 1.3 million active personnel, India has the third-largest military force and the largest volunteer army.</p>
+        <h3>Economic Advisory Council</h3>
+        <p>Economic Advisory Council to the Prime Minister (PMEAC)[1] is a non-constitutional, non-permanent and independent body constituted to give economic advice to the Government of India, specifically the Prime Minister.</p>
+        <ul>
+          <li>The executive power is vested mainly in the president of India, as per Article 53(1) of the constitution.</li>
+          <li>The council of ministers remains in power during the 'pleasure' of the president.</li>
+          <li>The president is responsible for appointing many high officials in India.</li>
+        </ul>
+        <p>Cabinet, ministries and agencies.</p>
+        <ol>
+          <li>The Cabinet of India includes the prime minister and cabinet ministers.</li>
+          <li>Each minister must be a member of one of the houses of the parliament.</li>
+          <li>Other ministers are either as union cabinet ministers, who are heads of the various ministries; or ministers of state, who are junior members who report directly to one of the cabinet ministers, often overseeing a specific aspect of government; or ministers of state (independent charges), who do not report to a cabinet minister.</li>
+        </ol>
+        <p>The supreme court is the highest judicial forum and final court of appeal under the Constitution of India, the highest constitutional court, with the power of constitutional review. Consisting of the Chief Justice of India and 30 sanctioned other judges, it has extensive powers in the form of original, appellate and advisory jurisdictions.</p>
+      </div><!-- /.blog-post -->
+
+      <div class="blog-post">
+        <h2 class="blog-post-title">Stocks to Watch: Kotak Mahindra Bank, Hero MotoCorp, RIL, Tata Power, Eicher</h2>
+        <p class="blog-post-meta">June 1, 2020 by <a href="#">Prince</a></p>
+
+        <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+        <blockquote>
+          <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </blockquote>
+        <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+      </div><!-- /.blog-post -->
+
+      <div class="blog-post">
+        <h2 class="blog-post-title">Stocks to Watch: Kotak Mahindra Bank, Hero MotoCorp, RIL, Tata Power, Eicher Motors</h2>
+        <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
+
+        <p>Uday Kotak will sell up to 56 million shares in Kotak Mahindra Bank through a block deal to reduce his stake.</p>
+        <ul>
+          <li>Tata Power has completed the acquisition of 51% stake in TP Central Odisha Distribution Ltd.</li>
+          <li>Billionaire banker Uday Kotak will sell up to 56 million shares in Kotak Mahindra Bank through a block deal on Tuesday to reduce his stake to 26.1%.</li>
+          <li>These shares will be priced between ₹1,215 and ₹1,240 and will constitute 2.83% of the total equity shares outstanding.</li>
+        </ul>
+        <p>The mega ₹53,125-crore rights issue of country's most valued firm Reliance Industries Ltd (RIL) was completely subscribed on Monday, two days ahead of the last day of the share sale.</p>
+        <p>The company reported total sales of 58,906 units in May after resuming operations which were suspended due to nationwide lockdown. Total two-wheeler sales stood at 56,218 units, out of which domestic sales were at 41,067 units last month, TVS Motor said in a statement. Three-wheeler sales stood at 2,688 units in May, it added.</p>
+      </div><!-- /.blog-post -->
+
+      <nav class="blog-pagination">
+        <a class="btn btn-outline-primary" href="#">Older</a>
+        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+      </nav>
+
+    </div><!-- /.blog-main -->
+
+    <aside class="col-md-4 blog-sidebar">
+      <div class="p-4 mb-3 bg-light rounded">
+        <h4 class="font-italic">About</h4>
+        <p class="mb-0">The platform<em>Geeky Prince</em> here you not only get the updates and news about tech but here we display news according to you which type of news you want to see so keep visiting Us.</p>
+      </div>
+
+      <div class="p-4">
+        <h4 class="font-italic">Important News</h4>
+        <ol class="list-unstyled mb-0">
+          <li><a href="#">January </a></li>
+          <li><a href="#">February </a></li>
+          <li><a href="#">March </a></li>
+          <li><a href="#">April </a></li>
+          <li><a href="#">May </a></li>
+          <li><a href="#">June </a></li>
+          <li><a href="#">July </a></li>
+          <li><a href="#">August </a></li>
+          <li><a href="#">September</a></li>
+          <li><a href="#">October </a></li>
+          <li><a href="#">November </a></li>
+          <li><a href="#">December </a></li>
+         
+          
+          
+          
+          
+          
+          
+        </ol>
+      </div>
+
+      <div class="p-4">
+        <h4 class="font-italic">Other Media</h4>
+        <ol class="list-unstyled">
+          <li><a href="#">Youtube</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Linkedin</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Github</a></li>
+
+        </ol>
+      </div>
+    </aside><!-- /.blog-sidebar -->
+
+  </div><!-- /.row -->
+
+</main><!-- /.container -->
+
+<footer class="blog-footer">
+  <p>This Website is build by <a href="https://www.youtube.com/technicalshivgotra">Prince Rajput</a> by <a href="https://www.youtube.com/technicalshivgotra">@GeekyPrince</a>.</p>
+  <p>
+    <a href="/">Back to top</a>
+  </p>
+</footer>
+{% endblock name %}
+

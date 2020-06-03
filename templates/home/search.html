@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %} Geeky Prince : Search-Result
+{% endblock title %}
+{% block name %}
+</div>
+<div class="container my-3"><br><hr>
+    <h2>Search result: </h2>
+    <br><hr>
+    {% if allPosts|length < 1 %}
+        <p><b>No search results</b></p>
+        <br>
+        <h4>Your search Query : <b>{{ query| truncatechars:30 }} </b> did not match any document</h4>
+        <h4>Suggestions:</h4>
+        <ul>
+        <li>Make sure that all words are spelled correctly.</li>
+        <li>Try different keywords.</li>
+        <li>Try more general keywords.</li>
+        </ul>
+    {% endif %}
+
+{% for post in allPosts %}
+
+<div class="container-md">
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">India</strong>
+          <h3 class="mb-0">{{post.title}}</h3>
+          <div class="mb-1 text-muted">{{post.datetime}}</div>
+          <p class="card-text mb-auto">{{post.content| truncatechars:200}}</p>
+          <a href="/blog/{{post.slug}}" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <a><img class="bd-placeholder-img" width="200" height="250" href="" ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endfor %}
+{% endblock name %}
+{% block blogactive %} active {% endblock blogactive %}
